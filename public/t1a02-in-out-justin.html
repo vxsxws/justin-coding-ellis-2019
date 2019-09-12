@@ -1,13 +1,16 @@
-<input type=text id="myText01" value="what"><br>
+<input type=text id="myName01" value="Fred"><br>
+<input type=text id="myAge01" value="16"><br>
 
-<input type=button value="dododododododododo" onclick="{
-                                      
-  let myTemp = document.getElementById('myText01').value
-  document.getElementById('myDiv01').innerHTML = myTemp
+<input type=button value=run onclick="{
+  let myAge = Math.abs(document.getElementById('myAge01').value)
+  let myTemp = 'You are a teenager'
+  if (myAge <= 12){myTemp = 'You are a child'}
+  if (myAge >= 12 && myAge < 65){myTemp = 'You are an adult'}
+  if (myAge >= 65){myTemp = 'You can retire'}
   
-  }">
-
-<div id="myDiv01">cool</div>
+  document.getElementById('myDiv01').innerHTML = myTemp
+}">
+<div id="MyDiv01">...</div>
 
 <input type=text id="myText02" value="what"><br>
 
