@@ -7,6 +7,8 @@
     </style>
   </head>
   <body>
+    <div id=age>
+    <h1>Enter your age.</h1>
 <input type=text id="myName01" value="Fred"><br>
 <input type=text id="myAge01" value="16"><br>
 
@@ -21,15 +23,24 @@
 }">
 <div id="myDiv01">...</div>
 
-<input type=text id="myText02" value="what"><br>
+     </div>
+     <div id=height>
+     <h1>Enter your height (in centimetres).</h1>
+<input type=text id="myName02" value="Fred"><br>
+<input type=text id="myHeight01" value="16"><br>
 
-<input type=button value="dododododododododo" onclick="{
-                                      
-  let myTemp = document.getElementById('myText02').value
-  document.getElementById('myDiv02').innerHTML = myTemp
+<input type=button value=run onclick="{
+  let myHeight = Math.abs(document.getElementById('myHeight01').value)
+  let myTemp = 'You are a human'
+  if (myHeight <= 149.86){myTemp = 'You are a dwarf'}
+  if (myHeight <= 161.5){myTemp = 'You are short'}
+  if (myHeight >= 161.5 && myHeight < 175.4){myTemp = 'You are a human'}
+  if (myHeight >= 175.4){myTemp = 'You are tall'}
+  if (myHeight >= 200){myTemp = 'You belong in the NBA'}
   
-  }">
-
-<div id="myDiv02">cool</div>
+  document.getElementById('myDiv02').innerHTML = myTemp
+}">
+<div id="myDiv02">...</div>
+     </div>
   </body>
 </html>
