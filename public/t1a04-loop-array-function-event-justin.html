@@ -6,21 +6,24 @@ function myExampleFunction(){
 	document.getElementById('myDiv01').innerHTML = ''
 	
 	myArray = new Array()
-	myArray[0] = 'Justin'
-	myArray[1] = 'Dustin'
-	myArray[2] = 'Austin'
+	myArray[0] = 'Gustin'
+	myArray[1] = 'Justin'
+	myArray[2] = 'Dustin'
+	myArray[3] = 'Austin'
+	myArray[9] = 'Bustin'
 
 	for (let myLoop=0;	myLoop < myTemp;	myLoop++){
-		mySum += 'Loop #:' + myLoop + ' array entry: ' + myArray[myLoop] +'<br>'
+		mySum += 'Loop #:' + myLoop + ' Name: ' + myArray[myLoop] +'<br>'
 	}
 	document.getElementById('myDiv01').innerHTML = mySum
 	}
 	
 	</script>
 	
-	<input type=text id="myText01" value="3"><br>
+	<p>Click button, and press any key to run.</p>
+	<input type=text id="myText01" value="22"><br>
 	
-	<input type=button value="loop-array-function-event" onmouseover="{
+	<input type=button value="loop-array-function-event" onkeydown="{
 		myExampleFunction()
 	}">
 	
