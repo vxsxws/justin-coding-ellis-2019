@@ -33,11 +33,14 @@
 <input type=button value=run onclick="{
   let myHeight = Math.abs(document.getElementById('myHeight01').value)
   let myTemp = 'You are a human'
+  if (myHeight <= 60){myTemp = 'You are a baby'}
   if (myHeight <= 149.86){myTemp = 'You are a dwarf'}
   if (myHeight <= 161.5){myTemp = 'You are short'}
-  if (myHeight >= 161.5 && myHeight < 175.4){myTemp = 'You are a human'}
+  if (myHeight >= 161.5 && myHeight < 175.4){myTemp = 'You are average'}
   if (myHeight >= 175.4){myTemp = 'You are tall'}
   if (myHeight >= 200){myTemp = 'You belong in the NBA'}
+  if (myHeight >= 244){myTemp = 'You are a giant'}
+  if (myHeight >= 350){myTemp = 'You are a tank'}
   
   document.getElementById('myDiv02').innerHTML = myTemp
 }">
