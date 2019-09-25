@@ -14,9 +14,17 @@ color:#990000;
 p.ex{
 color: rgb(255,0,0);
 }
-#textarea{
-background-image: "smile.png";
+#bgimages{
+background-image: url("smile.png");
+background-size: auto;
+background-position: center;
 }
+#borders{
+border: 5px dotted red;
+}
+#borderimg{
+border: 5px solid red;
+border-radius: 10px;
 </style>
 
 <h1 align=center>css by justin</h1>
@@ -27,7 +35,7 @@ background-image: "smile.png";
 
 <input type=button value=clickme style="background-color: red; color: white;"
 onclick="{
-alert('It works')
+alert('does it really work?')
 }">
 
 <p> Regular paragraph</p>
@@ -55,6 +63,8 @@ Road.<br>Or from the mine will be trucked to Brisbane and exported to Japan, the
 </div>
 <div id=borders>
 <!--border-color, border-style, width for a div-->
+<img id=borderimg src="white cat.png" alt="a white cat is supposed to be here but your browser sucks so i guess thats rather unfortunate :/" width="500">
+<p>you can use the property border-radius to make borders rounded</p>
 </div>
 <div id=lists>
 <!--list-style-image for 
@@ -63,4 +73,7 @@ or <OL><li><li></ol> lists-->
 </div>
 <div id=images>
 <!--z-index for overlapping images-->
+<img id=img1 src="ad.png" alt="ad">
+<img id=img2 src="skeleton.png" alt="sk">
+<img id=img3 src="skeleton2.png" alt="sk2">
 </div>
