@@ -1,3 +1,22 @@
+<style>
+body{
+background-color: #000000;
+color: #ffffff;
+font-family: Courier New, monospace;
+}
+h1, h2, h3, h4, h5, h6{
+color: #ff0000;
+}
+a{
+color: #990000;
+}
+a:hover{
+color: #d10000;
+}
+a:active {
+color: #ff0000;
+} 
+</style>
 <script>
 
 function myExampleFunction(){
@@ -20,10 +39,10 @@ function myExampleFunction(){
 	
 	</script>
 	
-	<p>Click button, and press any key to run.</p>
-	<input type=text id="myText01" value="22"><br>
+	<p>hover to run.</p>
+	<input type=text id="myText01" value="3"><br>
 	
-	<input type=button value="loop-array-function-event" onkeydown="{
+	<input type=button value="loop-array-function-event" onmouseover="{
 		myExampleFunction()
 	}">
 	
