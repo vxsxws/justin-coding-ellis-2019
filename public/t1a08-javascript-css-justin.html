@@ -16,6 +16,9 @@ color: #d10000;
 a:active {
 color: #ff0000;
 } 
+p{
+margin: 0;
+}
 </style>
 <h1>t1a08-javascript-css-justin.html</h1>
 <input type=button value="change" onclick="{
@@ -44,19 +47,12 @@ this is a box</span>
 
 <select id="myText02" size=1 onChange="{
 	let myFont = document.getElementById('myText02').value
-	document.getElementById('myDiv02').style.borderStyle = myFont
+	document.getElementById('myDiv02').style.fontFamily = myFont
 }">
 
-<option value="groove">sans
-<option value="dotted">dotted
-<option value="none">none
-<option value="solid">solid
-<option value="double">double
-<option value="ridge">ridge
-<option value="inset">inset
-<option value="outset">outset
+<option value="Courier New, monospace">courier new
+<option value="Comic Sans MS, Comic Sans">comic sans ms
 </select>
 
-<span id="myDiv02" style="border-style:groove; border-width:4;
-border-color:red">
+<span id="myDiv02" style="font-family:Courier New, monospace;">
 this is some text</span>
