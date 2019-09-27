@@ -1,4 +1,3 @@
-<head>
 <style>
 body{
 background-color: #000000;
@@ -18,4 +17,46 @@ a:active {
 color: #ff0000;
 } 
 </style>
-</head>
+<h1>t1a08-javascript-css-justin.html</h1>
+<input type=button value="change" onclick="{
+	document.getElementById('myB01').style.color= 'white'
+}">
+<b id="myB01" style="color:red">hi this is cool</b><br><br><br>
+<select id="myText01" size=1 onChange="{
+	let myBorder = document.getElementById('myText01').value
+	document.getElementById('myDiv01').style.borderStyle = myBorder
+}">
+
+<option value="groove">groove
+<option value="dotted">dotted
+<option value="none">none
+<option value="solid">solid
+<option value="double">double
+<option value="ridge">ridge
+<option value="inset">inset
+<option value="outset">outset
+</select>
+
+<span id="myDiv01" style="border-style:groove; border-width:4;
+border-color:red">
+this is a box</span>
+<br><br><br>
+
+<select id="myText02" size=1 onChange="{
+	let myFont = document.getElementById('myText02').value
+	document.getElementById('myDiv02').style.borderStyle = myFont
+}">
+
+<option value="groove">sans
+<option value="dotted">dotted
+<option value="none">none
+<option value="solid">solid
+<option value="double">double
+<option value="ridge">ridge
+<option value="inset">inset
+<option value="outset">outset
+</select>
+
+<span id="myDiv02" style="border-style:groove; border-width:4;
+border-color:red">
+this is some text</span>
