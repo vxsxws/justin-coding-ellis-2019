@@ -1,0 +1,25 @@
+<h1 align=center>t1a09-objects-justin<br>
+objects, decisions, decimals by justin</h1>
+
+<--
+you add bodyTemp and determine if the user has a fever.
+advanced: input the body temp into the object.
+-->
+
+<br>
+body temp: <input type=text id="myText01" value="36.1">degrees celcius<br>
+<input type=button value="input/output" onclick+"{
+    let myPerson = {'age':'16', 'name':'justin'};
+    let myTemp = document.getElementById('myText01').value
+    let myPrintout = 'myPerson object :' + JSON.stringify(myPerson, null, 3)
+    + 'myPerson.age : ' + myPerson.age
+    let myIf = 'cool'
+    if (parseInt(myPerson.age) >= 20) {myIf ='You are an adult'}
+
+    document.getElementById('myDiv01').innerHTML = myIf
+    document.getElementById('myTextArea01').value = myPrintout
+
+    }">
+
+<div id="myDiv01">...</div><br>
+<textarea id="myTextArea01" rows=10 cols=80 noWRAP>...</textarea>
