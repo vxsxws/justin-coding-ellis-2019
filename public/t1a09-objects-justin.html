@@ -8,8 +8,8 @@ advanced: input the body temp into the object.
 
 <br>
 body temp: <input type=text id="myText01" value="36.1">degrees celcius<br>
-<input type=button value="input/output" onclick+"{
-    let myPerson = {'age':'16', 'name':'justin'};
+<input type=button value="input/output" onclick="{
+    let myPerson = {'age':'22', 'name':'justin'};
     let myTemp = document.getElementById('myText01').value
     let myPrintout = 'myPerson object :' + JSON.stringify(myPerson, null, 3)
     + 'myPerson.age : ' + myPerson.age
