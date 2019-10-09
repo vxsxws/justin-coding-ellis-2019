@@ -15,5 +15,24 @@ color: #d10000;
 }
 a:active {
 color: #ff0000;
-} 
+}
 </style>
+<h1>t1a10-object-array by justin</h1>
+<input type=button value="show object array" onclick="{
+    let myObjectArray = {'age':'22', 'name':'justin'};
+
+    let myPrintout='myObjectArray = '+JSON.stringify(myObjectArray,null,3)
+    document.getElementById('myTextArea01').value = myPrintout
+    document.getElementById('myDiv01').innerHTML = 'Nothing useful here'
+    }">
+
+<input type=button value="show object array" onclick="{
+    let myObjectArray = {'age':'22', 'name':'justin'};
+
+    let myPrintout='myObjectArray = '+JSON.stringify(myObjectArray,null,3)
+    document.getElementById('myTextArea01').value = myPrintout
+    document.getElementById('myDiv01').innerHTML = 'Nothing useful here'
+    }">
+
+<div id="myDiv01">...</div><br>
+<textarea id="myTextArea01" rows=10 cols=80 noWRAP>...</textarea>
