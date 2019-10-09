@@ -9,7 +9,7 @@ advanced: input the body temp into the object.
 <br>
 body temp: <input type=text id="myText01" value="36.1">degrees celcius<br>
 <input type=button value="input/output" onclick="{
-    let myPerson = {'age':'22', 'name':'justin'};
+    let myPerson = {'age':'16', 'height':'182.88', 'name':'justin'};
 
     let myTemp = document.getElementById('myText01').value
 
@@ -17,6 +17,7 @@ body temp: <input type=text id="myText01" value="36.1">degrees celcius<br>
     + 'myPerson.age : ' + myPerson.age
     let myIf = 'cool'
     if ( parseInt(myPerson.age) >= 20) {myIf ='You are an adult'}
+    if ( parseInt(myPerson.height) >= 182.88) {myIf ='You are tall'}
 
     document.getElementById('myDiv01').innerHTML = myIf
     document.getElementById('myTextArea01').value = myPrintout
