@@ -1,28 +1,70 @@
-<h1 align=center>t1a09-objects-justin<br>
-objects, decisions, decimals by justin</h1>
+<style>
+body{
+background-color: #000000;
+color: #ffffff;
+font-family: Courier New, monospace;
+}
+h1, h2, h3, h4, h5, h6{
+color: #ff0000;
+}
+a{
+color: #990000;
+}
+a:hover{
+color: #d10000;
+}
+a:active {
+color: #ff0000;
+}
+</style>
+<body>
 
 <!--
 you add bodyTemp and determine if the user has a fever.
 advanced: input the body temp into the object.
 -->
 
+<h1 align=center>t1a09-objects-justin<br>
+objects, decisions, decimals by justin</h1>
+<br><br>
+<input type=button value="name" onclick="{
+var myPerson = {}
+myPerson=JSON.parse(document.getElementById('myTextArea01').value)
+document.getElementById('myDiv01').innerHTML = 'the name of the person is '+myPerson.name+'.'
+}">
+
 <br>
-body temp: <input type=text id="myText01" value="36.1">degrees celcius<br>
-<input type=button value="input/output" onclick="{
-    let myPerson = {'age':'16', 'height':'182.88', 'name':'justin'};
 
-    let myTemp = document.getElementById('myText01').value
+<input type=button value="age" onclick="{
+var myPerson = {}
+myPerson=JSON.parse(document.getElementById('myTextArea01').value)
+document.getElementById('myDiv01').innerHTML = myPerson.name+' is '+myPerson.age+' years old.'
+}">
 
-    let myPrintout = 'myPerson object :' + JSON.stringify(myPerson, null, 3)
-    + 'myPerson.age : ' + myPerson.age
-    let myIf = 'cool'
-    if ( parseInt(myPerson.age) >= 20) {myIf ='You are an adult'}
-    if ( parseInt(myPerson.height) >= 182.88) {myIf ='You are tall'}
+<br>
 
-    document.getElementById('myDiv01').innerHTML = myIf
-    document.getElementById('myTextArea01').value = myPrintout
+<input type=button value="temperature" onclick="{
+var myPerson = {}
+myPerson=JSON.parse(document.getElementById('myTextArea01').value)
+document.getElementById('myDiv01').innerHTML = myPerson.name+' has a temperature of '+myPerson.bodyTemp+'°C.'
+}">
 
-    }">
+<br>
+
+<input type=button value="height" onclick="{
+var myPerson = {}
+myPerson=JSON.parse(document.getElementById('myTextArea01').value)
+document.getElementById('myDiv01').innerHTML = myPerson.name +' is '+myPerson.height+'cm.'
+}">
+
+<br>
+
 
 <div id="myDiv01">...</div><br>
-<textarea id="myTextArea01" rows=10 cols=80 noWRAP>...</textarea>
+<textarea rows="8" cols="70" id="myTextArea01" >{
+"name":"justin",
+"age":"16",
+"bodyTemp":"36.1",
+"height":"182.88"
+}
+</textarea>
