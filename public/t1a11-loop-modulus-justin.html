@@ -1,0 +1,21 @@
+<h1 align=center>t1a11-loop-modulus-justin</h1>
+<!--enter any number of loops-->
+<input type=text id="myText01" value="25">
+<br>
+<br>
+<input type=button value="modulus decisions" onclick="{
+
+    let myLoopMax = document.getElementById('myText01').value
+    let myTemp = ''
+    let myFontColour
+
+    for (let myLoop=0; myLoop <= myLoopMax; myLoop++){
+        myFontColour = 'black'
+        let myMessage = ''
+
+        if (myLoop % 5 == 0){
+            myFontColour = 'green'
+            myMessage += ' Divisible by 5'
+        }
+        myTemp += '<font color='+myFontColour+'> Loop # ' + myLoop + '
+    }
