@@ -59,3 +59,18 @@ this is a box</span>
 
 <span id="myDiv02" style="font-family:Courier New, monospace;">
 this is some text</span>
+
+<select id="myText03" size=1 onChange="{
+	let myFont = document.getElementById('myText03').value
+	document.getElementById('myDiv03').style.backgroundColor = myBackground
+}">
+
+<option value="red">courier new
+<option value="Comic Sans MS, Comic Sans">comic sans ms
+<option value="Times New Roman">times new roman
+<option value="Arial">arial
+<option value="Impact">impact
+</select>
+
+<span id="myDiv03" style="font-family:Courier New, monospace;">
+this is some text</span>
