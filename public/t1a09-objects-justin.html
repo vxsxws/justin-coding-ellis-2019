@@ -46,7 +46,12 @@ document.getElementById('myDiv01').innerHTML = myPerson.name+' is '+myPerson.age
 <input type=button value="temperature" onclick="{
 var myPerson = {}
 myPerson=JSON.parse(document.getElementById('myTextArea01').value)
-document.getElementById('myDiv01').innerHTML = myPerson.name+' has a temperature of '+myPerson.bodyTemp+'°C.'
+if (myPerson.temperature < 32.7778){myPerson.bodyTemp = 'probably has amnesia'}
+if (myPerson.temperature < 35){myPerson.bodyTemp = 'is experiencing hypothermia'}
+if (myPerson.temperature < 36.1){myPerson.bodyTemp = 'is cold'}
+if (myPerson.temperature > 37.2){myPerson.bodyTemp = 'has a fever'}
+if (myPerson.temperature > 44){myPerson.bodyTemp = 'is literally burning'}
+document.getElementById('myDiv01').innerHTML = myPerson.name+' has a temperature of '+myPerson.temperature+'°C. '+myPerson.name+' '+myPerson.bodyTemp+'.'
 }">
 
 <br>
@@ -64,7 +69,8 @@ document.getElementById('myDiv01').innerHTML = myPerson.name +' is '+myPerson.he
 <textarea rows="8" cols="70" id="myTextArea01" >{
 "name":"justin",
 "age":"16",
-"bodyTemp":"36.1",
-"height":"182.88"
+"temperature":"36.1",
+"height":"182.88",
+"bodyTemp":"has a normal temperature"
 }
 </textarea>
