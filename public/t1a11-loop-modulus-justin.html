@@ -15,31 +15,64 @@ color: #d10000;
 }
 a:active {
 color: #ff0000;
-} 
+}
 </style>
 <h1 align=center>t1a11-loop-modulus-justin</h1>
 <!--enter any number of loops-->
-<input type=text id="myText01" value="25">
+<input type=text id="myText01" value="100">
 <br>
 <br>
-<input type=button value="modulus decisions" onclick="{
+<input type=button value="modulus decisions" onmouseover="{
 
     let myLoopMax = document.getElementById('myText01').value
     let myTemp = ''
-    let myFontColour
+    let myFontColor
 
     for (let myLoop=0; myLoop <= myLoopMax; myLoop++){
-        myFontColour = 'black'
+        myFontColor = 'white'
         let myMessage = ''
 
+
+	if (myLoop % 2 == 0){
+	    myFontColor = 'blue'
+	    myMessage += ' even,'
+	}
+	if (myLoop % 2){
+	    myFontColor = 'red'
+	    myMessage += ' odd,'
+	}
         if (myLoop % 5 == 0){
-            myFontColour = 'green'
-            myMessage += ' Divisible by 5'
+            myFontColor = 'green'
+            myMessage += ' divisible by 5,'
         }
-        myTemp += '<font color='+myFontColour+'> Loop # ' + myLoop + '</font>'+ myMessage +'<br>'
+        if (myLoop % 10 == 0){
+            myFontColor = 'purple'
+            myMessage += ' divisible by 10,'
+        }
+	if (myLoop % 11 == 0){
+	    myFontColor = 'cyan'
+	    myMessage += ' divisible by 11,'
+	}
+	if (myLoop == 22){
+	    myFontColor = 'yellow'
+	    myMessage += ' my favorite number'
+	}
+	if (myLoop == 42){
+	    myFontColor = 'yellow'
+	    myMessage += ' meaning of life'
+	}
+	if (myLoop == 57){
+	    myFontColor = 'yellow'
+	    myMessage += ' some weird number'
+	}
+	if (myLoop == 100){
+	    myFontColor = 'orange'
+	    myMessage += ' that cool number'
+	}
+        myTemp += '<font color='+myFontColor+'> loop # ' + myLoop + ':</font>'+ myMessage +'<br>'
     }
 
     document.getElementById('myDiv01').innerHTML = myTemp
 }"><br><br>
 
-<div id="myDiv01">lol</div>
+<div id="myDiv01">hiiiiiiii</div>
