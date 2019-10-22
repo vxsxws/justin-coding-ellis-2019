@@ -15,7 +15,7 @@ color: #d10000;
 }
 a:active {
 color: #ff0000;
-} 
+}
 </style>
 <script>
 let myInterval
@@ -23,8 +23,62 @@ let myInterval
 
 <h1 align=center>t1a12-auto-move-fred</h1>
 <!--make all directions (in a table?) replace fred with an image-->
-<div id="myDiv01" style="position:absolute; left:200; top:10; ">dumbass</div>
-<input type=button value="Go Right Auto" onclick="{
+<h1 id="myDiv01" style="position: absolute; left: 750; top: 200;">subject</h1>
+<input type=button value="up left auto" onclick="{
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+
+	document.getElementById('myDiv01').style.top = 
+	parseInt(document.getElementById('myDiv01').style.top) -10
+
+	document.getElementById('myDiv01').style.left = 
+	parseInt(document.getElementById('myDiv01').style.left) -10
+	} , 200)
+}">
+<input type=button value="up auto" onclick="{
+
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
+    document.getElementById('myDiv01').style.top =
+    parseInt(document.getElementById('myDiv01').style.top) - 10
+
+    } , 200)
+}">
+<input type=button value="up right auto" onclick="{
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+
+	document.getElementById('myDiv01').style.top = 
+	parseInt(document.getElementById('myDiv01').style.top) - 10
+
+	document.getElementById('myDiv01').style.left = 
+	parseInt(document.getElementById('myDiv01').style.left) + 10
+	} , 200)
+}">
+<br>
+<input type=button value="left auto" onclick="{
+
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
+    document.getElementById('myDiv01').style.left =
+    parseInt(document.getElementById('myDiv01').style.left) - 10
+
+    } , 200)
+}">
+<input type=button value="stop" onclick="{
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+
+	document.getElementById('myDiv01').style.top = 
+	parseInt(document.getElementById('myDiv01').style.top) * 1
+
+	document.getElementById('myDiv01').style.left = 
+	parseInt(document.getElementById('myDiv01').style.left) * 1
+	} , 200)
+}">
+<input type=button value="right auto" onclick="{
 
     clearInterval(myInterval)
     myInterval = setInterval(function(){
@@ -33,5 +87,37 @@ let myInterval
     parseInt(document.getElementById('myDiv01').style.left) + 10
 
     } , 200)
+}">
+<br>
+<input type=button value="down left auto" onclick="{
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
 
+	document.getElementById('myDiv01').style.top = 
+	parseInt(document.getElementById('myDiv01').style.top) + 10
+
+	document.getElementById('myDiv01').style.left = 
+	parseInt(document.getElementById('myDiv01').style.left) - 10
+	} , 200)
+}">
+<input type=button value="down auto" onclick="{
+
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
+    document.getElementById('myDiv01').style.top =
+    parseInt(document.getElementById('myDiv01').style.top) + 10
+
+    } , 200)
+}">
+<input type=button value="down right auto" onclick="{
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+
+	document.getElementById('myDiv01').style.top = 
+	parseInt(document.getElementById('myDiv01').style.top) + 10
+
+	document.getElementById('myDiv01').style.left = 
+	parseInt(document.getElementById('myDiv01').style.left) + 10
+	} , 200)
 }">
