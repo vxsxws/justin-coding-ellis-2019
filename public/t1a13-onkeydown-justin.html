@@ -62,6 +62,7 @@ if(parseInt(document.getElementById('myDiv01').style.top) < 15){
 </script>
 <div id='myDiv01' style="position:absolute; left:200; top:220;">subject</div>
 <h1 align=center> t1a13-onkeydown-justin
+		<br>use wasd, x to stop
 <body onkeydown="{
 	let myKey = event.key
   //	let myKey = String.toLowerCase(event.key)
@@ -99,6 +100,18 @@ if (myKey == 'd') {
 	myInterval = setInterval(function(){
 		document.getElementById('myDiv01').style.left =
 	parseInt(document.getElementById('myDiv01').style.left) + 20
+	myIsOnScreen()
+		} , 50)
+	}
+if (myKey == 'x') {
+
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+	document.getElementById('myDiv01').style.top = 
+	parseInt(document.getElementById('myDiv01').style.top) * 1
+
+	document.getElementById('myDiv01').style.left = 
+	parseInt(document.getElementById('myDiv01').style.left) * 1
 	myIsOnScreen()
 		} , 50)
 	}
