@@ -15,39 +15,65 @@ color: #d10000;
 }
 a:active {
 color: #ff0000;
-} 
+}
 </style>
 <script>
-    let myInterval
-
+	let myInterval
 function myIsOnScreen(){
-    if (parseInt(document.getElementById('myDiv01').style.left) > 400) {
-        document.getElementById('myDiv01').style.left ='397px'
-    }
+	if(parseInt(document.getElementById('myDiv01').style.left) >1400){
+	document.getElementById('myDiv01').style.left = '1400px'
 }
-
+if(parseInt(document.getElementById('myDiv01').style.left) <-50){
+	document.getElementById('myDiv01').style.left = '-50px'
+}
+if(parseInt(document.getElementById('myDiv01').style.top) >550){
+	document.getElementById('myDiv01').style.top = '550px'
+}
+if(parseInt(document.getElementById('myDiv01').style.top) <0){
+	document.getElementById('myDiv01').style.top = '0px'
+}
+}
 </script>
-
+<div id='myDiv01' style="position:absolute; left:200; top:220;">subject</div>
+<h1 align=center> w=up a=left s=down d=right
 <body onkeydown="{
+	let myKey = event.key
+  //	let myKey = String.toLowerCase(event.key)
 
-    let myKey = event.myKey
-//  let myKey = String.toLowerCase(event.key)
+if (myKey == 'w') {
 
-    if (myKey == 'd') {
-        clearInterval(myInterval)
-        myInterval = setInterval(function(){
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.top =
+	parseInt(document.getElementById('myDiv01').style.top) - 20
+	myIsOnScreen()
+		} , 50)
+	}
+if (myKey == 'a') {
 
-            document.getElementById('myDiv01').style.left =
-                parseInt(document.getElementById('myDiv01').style.left) + 3
-            myIsOnScreen()
-        } , 20)
-    }
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.left =
+	parseInt(document.getElementById('myDiv01').style.left) - 20
+	myIsOnScreen()
+		} , 50)
+	}
+if (myKey == 's') {
+
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.top =
+	parseInt(document.getElementById('myDiv01').style.top) + 20
+	myIsOnScreen()
+		} , 50)
+	}
+if (myKey == 'd') {
+
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.left =
+	parseInt(document.getElementById('myDiv01').style.left) + 20
+	myIsOnScreen()
+		} , 50)
+	}
 }">
-
-<h1 align=center>t1a13-onkeydown-fred</h1>
-<!--get wasd working, what abt a second object controlled by arrows or ijkl-->
-
-<div id="myDiv01" style="position:absolute; left:200; top:200;">dumbass</div>
-
-</body>
-
