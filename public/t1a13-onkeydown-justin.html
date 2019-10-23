@@ -20,17 +20,43 @@ color: #ff0000;
 <script>
 	let myInterval
 function myIsOnScreen(){
-	if(parseInt(document.getElementById('myDiv01').style.left) >1400){
-	document.getElementById('myDiv01').style.left = '1400px'
+	if(parseInt(document.getElementById('myDiv01').style.left) > 1510){
+
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.left =
+	parseInt(document.getElementById('myDiv01').style.left) - 20
+	myIsOnScreen()
+		} , 50)
 }
-if(parseInt(document.getElementById('myDiv01').style.left) <-50){
-	document.getElementById('myDiv01').style.left = '-50px'
+if(parseInt(document.getElementById('myDiv01').style.left) < 15){
+	
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.left =
+	parseInt(document.getElementById('myDiv01').style.left) + 20
+	myIsOnScreen()
+		} , 50)
 }
-if(parseInt(document.getElementById('myDiv01').style.top) >550){
-	document.getElementById('myDiv01').style.top = '550px'
+if(parseInt(document.getElementById('myDiv01').style.top) > 717){
+	
+
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.top =
+	parseInt(document.getElementById('myDiv01').style.top) - 20
+	myIsOnScreen()
+		} , 50)
 }
-if(parseInt(document.getElementById('myDiv01').style.top) <0){
-	document.getElementById('myDiv01').style.top = '0px'
+if(parseInt(document.getElementById('myDiv01').style.top) < 15){
+	
+
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.top =
+	parseInt(document.getElementById('myDiv01').style.top) + 20
+	myIsOnScreen()
+		} , 50)
 }
 }
 </script>
