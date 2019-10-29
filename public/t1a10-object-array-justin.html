@@ -1,3 +1,22 @@
+<style>
+body{
+background-color: #000000;
+color: #ffffff;
+font-family: Courier New, monospace;
+}
+h1, h2, h3, h4, h5, h6{
+color: #ff0000;
+}
+a{
+color: #990000;
+}
+a:hover{
+color: #d10000;
+}
+a:active {
+color: #ff0000;
+}
+</style>
 <input id="objectArray" type=button value="object array" onclick="{
     let objectArray = {'name':['justin', 'nitsuj', 'bustin'], 'age':['16', '61', '56'], 'favColor':['red', 'blue', 'green'], 'height':['182.88cm', '45.72cm', '176.5cm']};
     let myPrintout='objectArray = '+JSON.stringify(objectArray,null,3)
@@ -18,7 +37,7 @@
 
  <input id="arrayObject" type="button" value="array object" onclick="{
      let arrayObject = [ {'name':'justin'}, {'age':'16'}, {'favColor':'red'}, {'height':'182.88'} ];
-    
+
     let myPrintout='arrayObject = '+JSON.stringify(arrayObject,null,3)
     document.getElementById('myTextArea01').value = myPrintout
     document.getElementById('myDiv01').innerHTML = 'arrayObject[0].name = ' + arrayObject[0].name
