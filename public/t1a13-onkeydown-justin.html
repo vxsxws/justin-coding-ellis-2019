@@ -57,7 +57,7 @@ if(parseInt(document.getElementById('myDiv01').style.top) < 15){
 }
 }
 </script>
-<div id='myDiv01' style="position:absolute; left:200; top:220;">subject</div>
+<img id='myDiv01'  src="redkoolaid.png" style="position:absolute; left:200; top:200; width:100; height:100;">subject</div>
 <h1 align=center> t1a13-onkeydown-justin
 		<br>use wasd, ijkl, x to stop
 		<br>capitals work
@@ -196,6 +196,16 @@ if (myKey == 'L') {
 	}
 
 if (myKey == 'x') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.left =
+	parseInt(document.getElementById('myDiv01').style.left) * 1
+		document.getElementById('myDiv01').style.top =
+	parseInt(document.getElementById('myDiv01').style.top) * 1
+	myIsOnScreen()
+		} , 50)
+	}
+if (myKey == 'X') {
 	clearInterval(myInterval)
 	myInterval = setInterval(function(){
 		document.getElementById('myDiv01').style.left =
