@@ -29,7 +29,7 @@ function myIsOnScreen(){
 		} , 50)
 }
 if(parseInt(document.getElementById('myDiv01').style.left) < 15){
-	
+
 	clearInterval(myInterval)
 	myInterval = setInterval(function(){
 		document.getElementById('myDiv01').style.left =
@@ -38,7 +38,7 @@ if(parseInt(document.getElementById('myDiv01').style.left) < 15){
 		} , 50)
 }
 if(parseInt(document.getElementById('myDiv01').style.top) > 717){
-	
+
 	clearInterval(myInterval)
 	myInterval = setInterval(function(){
 		document.getElementById('myDiv01').style.top =
@@ -47,7 +47,7 @@ if(parseInt(document.getElementById('myDiv01').style.top) > 717){
 		} , 50)
 }
 if(parseInt(document.getElementById('myDiv01').style.top) < 15){
-	
+
 	clearInterval(myInterval)
 	myInterval = setInterval(function(){
 		document.getElementById('myDiv01').style.top =
@@ -59,7 +59,8 @@ if(parseInt(document.getElementById('myDiv01').style.top) < 15){
 </script>
 <div id='myDiv01' style="position:absolute; left:200; top:220;">subject</div>
 <h1 align=center> t1a13-onkeydown-justin
-		<br>use wasd, x to stop
+		<br>use wasd, ijkl, x to stop
+		<br>capitals work
 <body onkeydown="{
 	let myKey = event.key
   //	let myKey = String.toLowerCase(event.key)
@@ -95,6 +96,105 @@ if (myKey == 'd') {
 	myIsOnScreen()
 		} , 50)
 	}
+
+if (myKey == 'W') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.top =
+	parseInt(document.getElementById('myDiv01').style.top) - 20
+	myIsOnScreen()
+		} , 50)
+	}
+if (myKey == 'A') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.left =
+	parseInt(document.getElementById('myDiv01').style.left) - 20
+	myIsOnScreen()
+		} , 50)
+	}
+if (myKey == 'S') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.top =
+	parseInt(document.getElementById('myDiv01').style.top) + 20
+	myIsOnScreen()
+		} , 50)
+	}
+if (myKey == 'D') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.left =
+	parseInt(document.getElementById('myDiv01').style.left) + 20
+	myIsOnScreen()
+		} , 50)
+	}
+
+if (myKey == 'i') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.top =
+	parseInt(document.getElementById('myDiv01').style.top) - 20
+	myIsOnScreen()
+		} , 50)
+	}
+if (myKey == 'j') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.left =
+	parseInt(document.getElementById('myDiv01').style.left) - 20
+	myIsOnScreen()
+		} , 50)
+	}
+if (myKey == 'k') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.top =
+	parseInt(document.getElementById('myDiv01').style.top) + 20
+	myIsOnScreen()
+		} , 50)
+	}
+if (myKey == 'l') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.left =
+	parseInt(document.getElementById('myDiv01').style.left) + 20
+	myIsOnScreen()
+		} , 50)
+	}
+if (myKey == 'I') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.top =
+	parseInt(document.getElementById('myDiv01').style.top) - 20
+	myIsOnScreen()
+		} , 50)
+	}
+if (myKey == 'J') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.left =
+	parseInt(document.getElementById('myDiv01').style.left) - 20
+	myIsOnScreen()
+		} , 50)
+	}
+if (myKey == 'K') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.top =
+	parseInt(document.getElementById('myDiv01').style.top) + 20
+	myIsOnScreen()
+		} , 50)
+	}
+if (myKey == 'L') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.left =
+	parseInt(document.getElementById('myDiv01').style.left) + 20
+	myIsOnScreen()
+		} , 50)
+	}
+
 if (myKey == 'x') {
 	clearInterval(myInterval)
 	myInterval = setInterval(function(){
@@ -106,3 +206,4 @@ if (myKey == 'x') {
 		} , 50)
 	}
 }">
+
