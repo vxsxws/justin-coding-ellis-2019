@@ -1,0 +1,77 @@
+<style>
+body{
+background-color: #000000;
+color: #ffffff;
+font-family: Courier New, monospace;
+}
+h1, h2, h3, h4, h5, h6{
+color: #ff0000;
+}
+a{
+color: #990000;
+}
+a:hover{
+color: #d10000;
+}
+a:active {
+color: #ff0000;
+}
+</style>
+<body>
+<h1 align=center>t2a01-calculator-justin</h1>
+<div id=addition>
+<h1>addition</h1>
+<input type=text id="myAdd01" value="">
++
+<input type=text id="myAdd02" value=""><br>
+
+<input type=button value="add" onclick="{
+  let myAdd01 = Math.abs(document.getElementById('myAdd01').value)
+  let myAdd02 = Math.abs(document.getElementById('myAdd02').value)
+  document.getElementById('myDiv01').innerHTML = myAdd01 + myAdd02
+}">
+<div id="myDiv01">...</div>
+</div>
+
+<div id=subtraction>
+<h1>subtraction</h1>
+<input type=text id="mySubtract01" value="">
+-
+<input type=text id="mySubtract02" value=""><br>
+
+<input type=button value="subtract" onclick="{
+  let mySubtract01 = Math.abs(document.getElementById('mySubtract01').value)
+  let mySubtract02 = Math.abs(document.getElementById('mySubtract02').value)
+  document.getElementById('myDiv02').innerHTML = mySubtract01 - mySubtract02
+}">
+<div id="myDiv02">...</div>
+</div>
+
+<div id=multiplication>
+<h1>multiplication</h1>
+<input type=text id="myMultipy01" value="">
+×
+<input type=text id="myMultipy02" value=""><br>
+
+<input type=button value="multiply" onclick="{
+  let myMultipy01 = Math.abs(document.getElementById('myMultipy01').value)
+  let myMultipy02 = Math.abs(document.getElementById('myMultipy02').value)
+  document.getElementById('myDiv03').innerHTML = myMultipy01 * myMultipy02
+}">
+<div id="myDiv03">...</div>
+</div>
+
+<div id=division>
+<h1>division</h1>
+<input type=text id="myDivide01" value="">
+÷
+<input type=text id="myDivide02" value=""><br>
+
+<input type=button value="divide" onclick="{
+  let myDivide01 = Math.abs(document.getElementById('myDivide01').value)
+  let myDivide02 = Math.abs(document.getElementById('myDivide02').value)
+  document.getElementById('myDiv04').innerHTML = myDivide01 / myDivide02
+}">
+<div id="myDiv04">...</div>
+</div>
+</body>
