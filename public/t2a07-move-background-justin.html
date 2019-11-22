@@ -26,34 +26,297 @@ font-family: Courier New, monospace;
 color: white;
 outline-color: #ff0000;
 }
+#myButton03{
+visibility: hidden;
+}
+#myImage01{
+border: 3px solid red;
+}
 </style>
-<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground01.png">
+<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="/images/myBackground01.png" onkeydown="{
+	let myKey = event.key
+if (myKey == 'q'){
+	clearInterval(myClock)
+	myClock = setInterval(function(){
+	document.getElementById('myButton01').click()
+	}, 20)
+}
+if (myKey == 'e'){
+	clearInterval(myClock)
+	myClock = setInterval(function(){
+	document.getElementById('myButton02').click()
+	}, 20)
+}
+if (myKey == 'z'){
+	clearInterval(myClock)
+	myClock = setInterval(function(){
+	document.getElementById('myButton03').click()
+	}, 20)
+}
+if (myKey == 'Z'){
+	clearInterval(myClock)
+	myClock = setInterval(function(){
+	document.getElementById('myButton03').click()
+	}, 20)
+}
+if (myKey == 'Q'){
+	clearInterval(myClock)
+	myClock = setInterval(function(){
+	document.getElementById('myButton01').click()
+	}, 20)
+}
+if (myKey == 'E'){
+	clearInterval(myClock)
+	myClock = setInterval(function(){
+	document.getElementById('myButton02').click()
+	}, 20)
+}
+if (myKey == 'w') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.top =
+	parseInt(document.getElementById('myImage01').style.top) - 10
+	myIsOnScreen()
+		} ,  20)
+	}
+if (myKey == 'a') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.left =
+	parseInt(document.getElementById('myImage01').style.left) - 10
+	myIsOnScreen()
+		} , 20)
+	}
+if (myKey == 's') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.top =
+	parseInt(document.getElementById('myImage01').style.top) + 10
+	myIsOnScreen()
+		} , 20)
+	}
+if (myKey == 'd') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.left =
+	parseInt(document.getElementById('myImage01').style.left) + 10
+	myIsOnScreen()
+		} , 20)
+	}
+if (myKey == 'W') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.top =
+	parseInt(document.getElementById('myImage01').style.top) - 10
+	myIsOnScreen()
+		} , 20)
+	}
+if (myKey == 'A') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.left =
+	parseInt(document.getElementById('myImage01').style.left) - 10
+	myIsOnScreen()
+		} , 20)
+	}
+if (myKey == 'S') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.top =
+	parseInt(document.getElementById('myImage01').style.top) + 10
+	myIsOnScreen()
+		} , 20)
+	}
+if (myKey == 'D') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.left =
+	parseInt(document.getElementById('myImage01').style.left) + 10
+	myIsOnScreen()
+		} , 20)
+	}
+if (myKey == 'i') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.top =
+	parseInt(document.getElementById('myImage01').style.top) - 10
+	myIsOnScreen()
+		} , 20)
+	}
+if (myKey == 'j') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.left =
+	parseInt(document.getElementById('myImage01').style.left) - 10
+	myIsOnScreen()
+		} , 20)
+	}
+if (myKey == 'k') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myDiv01').style.top =
+	parseInt(document.getElementById('myDiv01').style.top) + 10
+	myIsOnScreen()
+		} , 20)
+	}
+if (myKey == 'l') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.left =
+	parseInt(document.getElementById('myImage01').style.left) + 10
+	myIsOnScreen()
+		} , 20)
+	}
+if (myKey == 'I') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.top =
+	parseInt(document.getElementById('myImage01').style.top) - 10
+	myIsOnScreen()
+		} , 20)
+	}
+if (myKey == 'J') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.left =
+	parseInt(document.getElementById('myImage01').style.left) - 10
+	myIsOnScreen()
+		} , 20)
+	}
+if (myKey == 'K') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.top =
+	parseInt(document.getElementById('myImage01').style.top) + 10
+	myIsOnScreen()
+		} , 20)
+	}
+if (myKey == 'L') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.left =
+	parseInt(document.getElementById('myImage01').style.left) + 10
+	myIsOnScreen()
+		} , 20)
+	}
+if (myKey == 'x') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.left =
+	parseInt(document.getElementById('myImage01').style.left) * 1
+		document.getElementById('myImage01').style.top =
+	parseInt(document.getElementById('myImage01').style.top) * 1
+	myIsOnScreen()
+		} , 20)
+	}
+if (myKey == 'X') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.left =
+	parseInt(document.getElementById('myImage01').style.left) * 1
+		document.getElementById('myImage01').style.top =
+	parseInt(document.getElementById('myImage01').style.top) * 1
+	myIsOnScreen()
+		} , 20)
+	}
+}">
 
 <h1 align=center>t2a07 move background justin</h1>
+<h2 align=center>use wasd/ijkl to auto move image (x to stop), use qe to move background (z to stop)</h2>
 
 <script>
 	let myGlobalX = 0
 	let myClock
+	let myInterval
+function myIsOnScreen(){
+	if(parseInt(document.getElementById('myImage01').style.left) > 1510){
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.left =
+	parseInt(document.getElementById('myImage01').style.left) - 10
+	myIsOnScreen()
+		} , 20)
+}
+if(parseInt(document.getElementById('myImage01').style.left) < 0){
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.left =
+	parseInt(document.getElementById('myImage01').style.left) + 10
+	myIsOnScreen()
+		} , 20)
+}
+if(parseInt(document.getElementById('myImage01').style.top) > 717){
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.top =
+	parseInt(document.getElementById('myImage01').style.top) - 10
+	myIsOnScreen()
+		} , 20)
+}
+if(parseInt(document.getElementById('myImage01').style.top) < -225){
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.top =
+	parseInt(document.getElementById('myImage01').style.top) + 10
+	myIsOnScreen()
+		} , 20)
+}
+}
 </script>
 
 <input id="myButton01" type=button value="background move left" onclick="{
 	myTemp = '100px 0px'
-	myGlobalX -= 100
+	myGlobalX -= 40
 	myTemp = myGlobalX + 'px 0px'
 	document.getElementById('myBody').style.backgroundPosition = myTemp
 }">
-
+<input id="myButton02" type=button value="background move right" onclick="{
+	myTemp = '100px 0px'
+	myGlobalX -= -40
+	myTemp = myGlobalX + 'px 0px'
+	document.getElementById('myBody').style.backgroundPosition = myTemp
+}">
+<input id="myButton03" type=button value="background move right" onclick="{
+	myTemp = '0px 0px'
+	myGlobalX -= 0
+	myTemp = myGlobalX + 'px 0px'
+	document.getElementById('myBody').style.backgroundPosition = myTemp
+}">
+<br><br>
 <input type=button value="auto background left" onclick="{
 	clearInterval(myClock)
 	myClock = setInterval(function(){
 	document.getElementById('myButton01').click()
-	}, 100)
+	}, 20)
 }">
-
+<input type=button value="auto background right" onclick="{
+	clearInterval(myClock)
+	myClock = setInterval(function(){
+	document.getElementById('myButton02').click()
+	}, 20)
+}">
+<input type=button value="stop background" onclick="{
+	clearInterval(myClock)
+	myClock = setInterval(function(){
+	document.getElementById('myButton03').click()
+	}, 20)
+}">
+<br><br>
+<input type=button value="image top" onclick="{
+	document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) - 10 + 'px'
+}">
+<input type=button value="image left" onclick="{
+	document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) - 10 + 'px'
+}">
 <input type=button value="image right" onclick="{
 	document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 10 + 'px'
+}">
+<input type=button value="image down" onclick="{
+	document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) + 10 + 'px'
 }">
 
 <br><br>
 
-<img id="myImage01" style="position:relative; width:100px; height:80px; top:0px; left:0px;" src="myImage01.png">
+<img id="myImage01" style="position:relative; width:100px; height:80px; top:0px; left:0px;" src="/images/myImage01.png">
+
+
