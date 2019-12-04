@@ -1,0 +1,27 @@
+<h2 align=center>t2a10-storage-justin | instructions:</h2>
+<body onload="{
+	myStorage = localStorage.getItem('myStoredText')
+	if(myStorage != null){
+	document.getElementById('myText01').value = myStorage
+	}
+}">
+
+<body onunload="{
+	localstorage.setItem('myStoredText',document.getElementById('myText01').value)
+}">
+
+text example:
+<input id="myText01" type=text size=70 value=""
+placeholder="write here to store"><br>
+
+<input type="button" value="store text" onClick="{
+	localStorage.setItem('myStoredText',
+document.getElementById('myText01').value)
+	alert(document.getElementById('myText01').value + ' \nHas been stored')
+	document.getElementById('myText01').value = ''
+}">
+
+<input type="button" value="retrieve text" onClick="{
+	document.getElementById('myText01').value =
+localStorage.getItem('myStoredText')
+}">

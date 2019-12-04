@@ -1,0 +1,29 @@
+<h1 align=center>t2a12 sort by justin</h1>
+
+<script>
+let myMax = 53
+let myCards = new Array(myMax)
+</script>
+
+<input type=button value="set random" onclick="{
+for (let myLoop = 1; myLoop < myMax; myLoop++){
+	myCards[myLoop] = Math.floor(Math.random()*10)
+	}
+}">
+
+<input type=button value="show" onclick="{
+let myTemp = 's'
+for (let myLoop = 1; myLoop < myMax; myLoop++){
+	myTemp += myLoop + ' = '+ myCards[myLoop] + '<br>'
+	}
+	document.getElementById('myDiv01').innerHTML = myTemp
+}">
+
+<input type=button value="sort" onclick="{
+let myTemp = 0
+for (let myLoop = 1; myLoop < MyMax; myLoop++){
+	myCards[myLoop] = 0 // i do this stuff
+	}
+}">
+
+<dir id="myDiv01"></div>
