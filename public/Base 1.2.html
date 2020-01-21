@@ -1,0 +1,444 @@
+<style>
+#instructions{
+position: absolute;
+top: 300px;
+left: 700px;
+}
+#line{
+color: white;
+position: absolute:
+height: 1000px;
+width: 5px;
+top: 0px;
+left: 700px;
+}
+body{
+color: #ffffff;
+font-family: Courier New, monospace;
+background-image: "images/jeremyfly.gif";
+background-color: #000000;
+}
+p{
+margin: 0;
+}
+h1, h2, h3, h4, h5, h6{
+color: #ff0000;
+}
+a{
+color: #990000;
+}
+input[type=button]:hover, a:hover{
+color: #d10000;
+}
+input[type=button]:active, a:active {
+color: #ff0000;
+} 
+input[type=button]{
+background-color: black;
+border: 1px solid white;
+font-family: Courier New, monospace;
+color: white;
+outline-color: #ff0000;
+}
+/*
+#myButton03{
+visibility: hidden;
+}
+#myImage01{
+border: 3px solid red;
+}
+#myImage02{
+border: 3px solid blue;
+}
+#myImage03{
+border: 3px solid lime;
+}
+#myImage04{
+border: 3px solid magenta;
+}
+#myImage05{
+border: 3px solid orange;
+}
+#myImage06{
+border: 3px solid yellow;
+}
+*/
+</style>
+<script>
+let myInterval01
+let myInterval02
+let myInterval03
+let myInterval04
+let myInterval05
+
+function myHitOther(my1,my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+
+   if ((right1  >=  left2  ) &&
+       (bottom1 >=  top2   ) &&
+       (left1   <=  right2 ) &&
+       (top1    <=  bottom2) ){
+       return true
+   }
+}
+
+
+
+
+
+
+function myIsOnScreen01() {
+  	if(parseInt(document.getElementById('myImage02').style.left) > 600){
+	clearInterval(myInterval01)
+	myInterval01 = setInterval(function(){
+
+		document.getElementById('myImage02').style.top =
+	parseInt(document.getElementById('myImage02').style.top) + 5
+		document.getElementById('myImage02').style.left =
+	parseInt(document.getElementById('myImage02').style.left) - 5
+	myIsOnScreen01()
+		} , 20)
+}
+if(parseInt(document.getElementById('myImage02').style.left) < 0){
+	clearInterval(myInterval01)
+	myInterval01 = setInterval(function(){
+		document.getElementById('myImage02').style.top =
+	parseInt(document.getElementById('myImage02').style.top) - 5
+		document.getElementById('myImage02').style.left =
+	parseInt(document.getElementById('myImage02').style.left) + 5
+	myIsOnScreen01()
+		} , 20)
+}
+if(parseInt(document.getElementById('myImage02').style.top) > 700){
+	clearInterval(myInterval01)
+	myInterval01 = setInterval(function(){
+		document.getElementById('myImage02').style.top =
+	parseInt(document.getElementById('myImage02').style.top) - 5
+	myIsOnScreen01()
+		} , 20)
+}
+if(parseInt(document.getElementById('myImage02').style.top) < 0){
+	clearInterval(myInterval01)
+	myInterval01 = setInterval(function(){
+		document.getElementById('myImage02').style.top =
+	parseInt(document.getElementById('myImage02').style.top) + 5
+		document.getElementById('myImage02').style.left =
+	parseInt(document.getElementById('myImage02').style.left) - 5
+	myIsOnScreen01()
+		} , 20)
+}
+}
+
+
+
+
+
+function myIsOnScreen02() {
+if(parseInt(document.getElementById('myImage03').style.left) > 600){
+	clearInterval(myInterval02)
+	myInterval02 = setInterval(function(){
+		document.getElementById('myImage03').style.left =
+	parseInt(document.getElementById('myImage03').style.left) - 10
+	myIsOnScreen02()
+		} , 20)
+}
+if(parseInt(document.getElementById('myImage03').style.left) < 0){
+	clearInterval(myInterval02)
+	myInterval02 = setInterval(function(){
+		document.getElementById('myImage03').style.left =
+	parseInt(document.getElementById('myImage03').style.left) + 10
+	myIsOnScreen02()
+		} , 20)
+}
+if(parseInt(document.getElementById('myImage03').style.top) > 700){
+	clearInterval(myInterval02)
+	myInterval02 = setInterval(function(){
+		document.getElementById('myImage03').style.top =
+	parseInt(document.getElementById('myImage03').style.top) - 10
+	myIsOnScreen02()
+		} , 20)
+}
+if(parseInt(document.getElementById('myImage03').style.top) < 0){
+	clearInterval(myInterval02)
+	myInterval02 = setInterval(function(){
+		document.getElementById('myImage03').style.top =
+	parseInt(document.getElementById('myImage03').style.top) + 10
+	myIsOnScreen02()
+		} , 20)
+	}
+}
+
+
+
+
+
+
+
+function myIsOnScreen03() {
+if(parseInt(document.getElementById('myImage04').style.left) > 600){
+	clearInterval(myInterval03)
+	myInterval03 = setInterval(function(){
+		document.getElementById('myImage04').style.left =
+	parseInt(document.getElementById('myImage04').style.left) - 10
+	myIsOnScreen03()
+		} , 20)
+}
+if(parseInt(document.getElementById('myImage04').style.left) < 0){
+	clearInterval(myInterval03)
+	myInterval03 = setInterval(function(){
+		document.getElementById('myImage04').style.left =
+	parseInt(document.getElementById('myImage04').style.left) + 10
+	myIsOnScreen03()
+		} , 20)
+}
+if(parseInt(document.getElementById('myImage04').style.top) > 700){
+	clearInterval(myInterval03)
+	myInterval03 = setInterval(function(){
+		document.getElementById('myImage04').style.top =
+	parseInt(document.getElementById('myImage04').style.top) - 10
+	myIsOnScreen03()
+		} , 20)
+}
+if(parseInt(document.getElementById('myImage04').style.top) < 0){
+	clearInterval(myInterval03)
+	myInterval03 = setInterval(function(){
+		document.getElementById('myImage04').style.top =
+	parseInt(document.getElementById('myImage04').style.top) + 10
+	myIsOnScreen03()
+		} , 20)
+}
+}
+
+
+
+
+
+
+
+
+function myIsOnScreen04() {
+if(parseInt(document.getElementById('myImage05').style.left) > 600){
+	clearInterval(myInterval04)
+	myInterval04 = setInterval(function(){
+		document.getElementById('myImage05').style.left =
+	parseInt(document.getElementById('myImage05').style.left) - 10
+	myIsOnScreen04()
+		} , 20)
+}
+if(parseInt(document.getElementById('myImage05').style.left) < 0){
+	clearInterval(myInterval04)
+	myInterval04 = setInterval(function(){
+		document.getElementById('myImage05').style.left =
+	parseInt(document.getElementById('myImage05').style.left) + 10
+	myIsOnScreen04()
+		} , 20)
+}
+if(parseInt(document.getElementById('myImage05').style.top) > 700){
+	clearInterval(myInterval04)
+	myInterval04 = setInterval(function(){
+		document.getElementById('myImage05').style.top =
+	parseInt(document.getElementById('myImage05').style.top) - 10
+	myIsOnScreen04()
+		} , 20)
+}
+if(parseInt(document.getElementById('myImage05').style.top) < 0){
+	clearInterval(myInterval04)
+	myInterval04 = setInterval(function(){
+		document.getElementById('myImage05').style.top =
+	parseInt(document.getElementById('myImage05').style.top) + 10
+	myIsOnScreen04()
+		} , 20)
+	}
+}
+
+function myIsOnScreen05() {
+if(parseInt(document.getElementById('myImage01').style.top) < 0){
+window.location.href = "google.ca";
+	}
+}
+
+function myImageMove() {
+	clearInterval(myInterval01)
+	myInterval01 = setInterval(function(){
+		document.getElementById('myImage02').style.top =
+	parseInt(document.getElementById('myImage02').style.top) - 10
+		document.getElementById('myImage02').style.left =
+	parseInt(document.getElementById('myImage02').style.left) + 10
+	myIsOnScreen01()
+		} , 20)
+
+	clearInterval(myInterval02)
+	myInterval02 = setInterval(function(){
+		document.getElementById('myImage03').style.left =
+	parseInt(document.getElementById('myImage03').style.left) - 10
+	myIsOnScreen02()
+		} , 20)
+
+	clearInterval(myInterval03)
+	myInterval03 = setInterval(function(){
+		document.getElementById('myImage04').style.left =
+	parseInt(document.getElementById('myImage04').style.left) - 10
+	myIsOnScreen03()
+		} , 20)
+
+	clearInterval(myInterval04)
+	myInterval04 = setInterval(function(){
+		document.getElementById('myImage05').style.left =
+	parseInt(document.getElementById('myImage05').style.left) - 10
+	myIsOnScreen04()
+		} , 20)
+}
+
+</script>
+<body onload="myImageMove()" onkeydown="{
+	let myKey = event.key
+if (myKey == 'w') {
+	document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) - 20 + 'px'
+	   if ( myHitOther('myImage01','myImage02') ){
+	   document.getElementById('myImage01').style.top = '0px'
+	   document.getElementById('myImage01').style.left = '0px'
+	}
+	   if ( myHitOther('myImage01','myImage03') ){
+	   document.getElementById('myImage01').style.top = '0px'
+	   document.getElementById('myImage01').style.left = '0px'
+	}
+	   if ( myHitOther('myImage01','myImage04') ){
+	   document.getElementById('myImage01').style.top = '0px'
+	   document.getElementById('myImage01').style.left = '0px'
+	}
+	   if ( myHitOther('myImage01','myImage05') ){
+	   document.getElementById('myImage01').style.top = '0px'
+	   document.getElementById('myImage01').style.left = '0px'
+	}
+	   if ( myHitOther('myImage01','myImage06') ){
+	   document.getElementById('myImage06').style.top = parseInt(document.getElementById('myImage06').style.top) - 20 + 'px'
+	}
+}
+if (myKey == 'a') {
+	document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) - 20 + 'px'
+	   if ( myHitOther('myImage01','myImage02') ){
+	   document.getElementById('myImage01').style.top = '0px'
+	   document.getElementById('myImage01').style.left = '0px'
+	}
+	   if ( myHitOther('myImage01','myImage03') ){
+	   document.getElementById('myImage01').style.top = '0px'
+	   document.getElementById('myImage01').style.left = '0px'
+	}
+	   if ( myHitOther('myImage01','myImage04') ){
+	   document.getElementById('myImage01').style.top = '0px'
+	   document.getElementById('myImage01').style.left = '0px'
+	}
+	   if ( myHitOther('myImage01','myImage05') ){
+	   document.getElementById('myImage01').style.top = '0px'
+	   document.getElementById('myImage01').style.left = '0px'
+	}
+	   if ( myHitOther('myImage01','myImage06') ){
+	   document.getElementById('myImage06').style.left = parseInt(document.getElementById('myImage06').style.left) - 20 + 'px'
+	}
+}
+if (myKey == 's') {
+	document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) + 20 + 'px'
+	   if ( myHitOther('myImage01','myImage02') ){
+	   document.getElementById('myImage01').style.top = '0px'
+	   document.getElementById('myImage01').style.left = '0px'
+	}
+	   if ( myHitOther('myImage01','myImage03') ){
+	   document.getElementById('myImage01').style.top = '0px'
+	   document.getElementById('myImage01').style.left = '0px'
+	}
+	   if ( myHitOther('myImage01','myImage04') ){
+	   document.getElementById('myImage01').style.top = '0px'
+	   document.getElementById('myImage01').style.left = '0px'
+	}
+	   if ( myHitOther('myImage01','myImage05') ){
+	   document.getElementById('myImage01').style.top = '0px'
+	   document.getElementById('myImage01').style.left = '0px'
+	}
+	   if ( myHitOther('myImage01','myImage06') ){
+	   document.getElementById('myImage06').style.top = parseInt(document.getElementById('myImage06').style.top) + 20 + 'px'
+	}
+}
+if (myKey == 'd') {
+	document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 20 + 'px'
+	   if ( myHitOther('myImage01','myImage02') ){
+	   document.getElementById('myImage01').style.top = '0px'
+	   document.getElementById('myImage01').style.left = '0px'
+	}	
+	   if ( myHitOther('myImage01','myImage03') ){
+	   document.getElementById('myImage01').style.top = '0px'
+	   document.getElementById('myImage01').style.left = '0px'
+	}	
+	   if ( myHitOther('myImage01','myImage04') ){
+	   document.getElementById('myImage01').style.top = '0px'
+	   document.getElementById('myImage01').style.left = '0px'
+	}	
+	   if ( myHitOther('myImage01','myImage05') ){
+	   document.getElementById('myImage01').style.top = '0px'
+	   document.getElementById('myImage01').style.left = '0px'
+	}
+	   if ( myHitOther('myImage01','myImage06') ){
+	   document.getElementById('myImage06').style.left = parseInt(document.getElementById('myImage06').style.left) + 20 + 'px'
+	}	
+}
+if (myKey == 'W') {
+	document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) - 20 + 'px'
+	}
+if (myKey == 'A') {
+	document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) - 20 + 'px'
+	}
+if (myKey == 'S') {
+	document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) + 20 + 'px'
+	}
+if (myKey == 'D') {
+	document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 20 + 'px'	
+	}
+if (myKey == 'x') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.left =
+	parseInt(document.getElementById('myImage01').style.left) * 1
+		document.getElementById('myImage01').style.top =
+	parseInt(document.getElementById('myImage01').style.top) * 1
+	myIsOnScreen()
+		} , 20)
+	}
+if (myKey == 'X') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage01').style.left =
+	parseInt(document.getElementById('myImage01').style.left) * 1
+		document.getElementById('myImage01').style.top =
+	parseInt(document.getElementById('myImage01').style.top) * 1
+	myIsOnScreen()
+		} , 20)
+	}
+if (myKey == 'i') {
+	clearInterval(myInterval)
+	myInterval = setInterval(function(){
+		document.getElementById('myImage02').style.top =
+	parseInt(document.getElementById('myImage02').style.top) - 10
+		document.getElementById('myImage03').style.top =
+	parseInt(document.getElementById('myImage03').style.top) - 10
+	myIsOnScreen()
+		} , 20)
+	}
+}">
+<p id="instructions">help jeremy avoid the particles and save the school by pushing it back home via wasd!<br>
+		(i couldnt find a way to program the victory, but by my rules the victory is when you push the MSS icon all the way up to the starting point)
+</p>
+<img id="myImage01" style="position:relative; width:100px; height:80px; top:0px; left:0px;" src="images/jeremyfly1.gif">
+<img id="myImage02" style="position:absolute; width:100px; height:80px; top:50px; left:400px;" src="images/particle.png">
+<img id="myImage03" style="position:absolute; width:100px; height:80px; top:100px; left:200px;" src="images/particle.png">
+<img id="myImage04" style="position:absolute; width:100px; height:80px; top:600px; left:300px;" src="images/particle.png">
+<img id="myImage05" style="position:absolute; width:100px; height:80px; top:300px; left:500px;" src="images/particle.png">
+<img id="myImage06" style="position:relative; width:100px; height:80px; top:500px; left:5px;" src="images/mss.png">
+<div id=line></div>
+</body>
